@@ -30,3 +30,6 @@ management:
   zipkin:
     tracing:
       endpoint: http://zipkin:9411/api/v2/spans
+logging:
+  pattern:
+    console: "%yellow(%d{yyyy-MM-dd HH:mm:ss.SSSZZZZZ}) %highlight(%-5level) ${PID:-} --- %red([${spring.application.name}]) %magenta([%thread]) %cyan([%X{traceId:-}-%X{spanId:-}]) %logger : %msg %n"
